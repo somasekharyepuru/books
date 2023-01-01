@@ -1,0 +1,8 @@
+<ul class="filter">
+    <li 
+        class="filter__item"
+        [class.filter__item--selected]="filter === selectedFilter" 
+        (click)="handleFilterChange(filter)" 
+        *ngFor="let filter of filters"
+    >{{ filter }}</li>
+</ul>

@@ -1,0 +1,9 @@
+<div class="books">
+    <app-book 
+        *ngFor="let book of books" [book]="book" 
+        (onComplete)="handleComplete($event)" 
+        (onWishlist)="handleWishlist($event)">
+    </app-book>
+
+    <h3 class="error-text" *ngIf="!books.length">No Books found</h3>
+</div>

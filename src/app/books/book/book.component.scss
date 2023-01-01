@@ -1,0 +1,80 @@
+.card {
+    padding: .5rem;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+    border-radius: 6px;
+    margin: .5rem;
+}
+
+.card__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .btn--completed {
+        background: #3C6255;
+        color: #fff;
+    }
+
+    .btn--wishlist {
+        background: #61876E;
+        color: #fff;
+    }
+}
+
+.book {
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    border-radius: 6px;
+    background: #fff;
+    margin: .5rem;
+    width: 475px;
+
+    &__image {
+        img {
+            border-bottom-left-radius: 6px;
+            width: 150px;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 6px;
+        }
+    }
+
+    &__meta {
+        padding: 1.5rem;
+        display: flex;
+        flex-flow: column;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        width: 95%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__description {
+        width: 100%;
+        flex: 1;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 10px;
+        .btn {
+            padding: 0;
+            margin: 0;
+
+            &:first-child {
+                margin-right: .5rem;
+            }
+
+            i {
+                font-size: 28px
+            }
+        }
+    }
+}

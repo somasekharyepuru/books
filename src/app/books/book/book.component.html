@@ -1,0 +1,20 @@
+<div class="book">
+    <div class="book__image">
+        <!-- https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80 -->
+        <img [src]="book?.imageLink"/>
+    </div>
+    <div class="book__meta">
+        <h3 class="book__title" [title]="book.title">{{ book.title }}</h3>
+        <p class="book__author">{{ book.author }}</p>
+        <div class="book__actions">
+            <button class="btn" (click)="handleComplete()">
+                <i class='bx bx-check-circle' *ngIf="!book?.isCompleted"></i>
+                <i class='bx bx-check-circle' style="color:green" *ngIf="book?.isCompleted"></i>
+            </button>
+            <button class="btn" (click)="handleWishlist()">
+                <i class='bx bx-book-heart' *ngIf="!book?.isFav"></i>
+                <i class='bx bx-book-heart' style="color:red" *ngIf="book?.isFav"></i>
+            </button>
+        </div>
+    </div>
+</div>
